@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="Styles/Checkout.css"> 
+</head>
+<header>
+    <h1>QuickCart Groceries</h1>
+    <nav>
+        <ul>               
+            <li><a href="index.html" class="nav">Home Page</a></li>
+            <li><a href="about.html" class="nav">About Us</a></li>
+            <li><a href="loyalty.html" class="nav">Loyalty Page</a></li>
+            <li><a href="paymentPage.html" class="nav">Checkout Page</a></li>
+            <li><a href="Grocery.html" class="nav">Grocery</a></li>
+            <li><a href="cosmetics.html" class="nav">Cosmetics</a></li>
+            <div class="topnav">
+            </div>  
+        </ul>  
+    </nav>
+</header>
+<body>
+    <h1>Checkout</h1>
+    
+    <div id="order-summary">
+        <table id="cartTable">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity / Kg</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total</td>
+                    <td id="totalPrice">Rs. 0/-</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <form id="checkout-form">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" maxlength="10" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Delivery Details</legend>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+            <label for="postal-code">Postal Code:</label>
+            <input type="text" id="postal-code" name="postal-code" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Payment Information</legend>
+            <label for="payment-type">Payment Type:</label>
+            <select id="payment-type" name="payment-type" required>
+                <option value="cash">Cash On Delivery</option>
+                <option value="card">Card Payment</option>
+            </select>
+
+            <div id="card-details" style="display: none;">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number">
+                <label for="card-expiry">Expiry Date:</label>
+                <input type="text" id="card-expiry" name="card-expiry">
+                <label for="card-cvc">CVC:</label>
+                <input type="text" id="card-cvc" name="card-cvc">
+            </div>
+        </fieldset>
+
+        <button type="button" id="pay-button">Pay</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script src="JS/Checkout.js"></script>
+</body>
+</html>
