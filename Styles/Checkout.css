@@ -1,11 +1,9 @@
-/* General Reset */
 body, h1, h2, h3, p, nav, img, a, div, section, header, footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -13,7 +11,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styling */
 header {
     background: #45a049;
     color: white;
@@ -81,14 +78,12 @@ nav ul li a:hover {
     color: black; 
 }
 
-/* Main Container */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Table Styling */
 #order-summary {
     background: white;
     padding: 20px;
@@ -121,7 +116,6 @@ nav ul li a:hover {
     background-color: #f1f1f1;
 }
 
-/* Form Styling */
 form {
     background: white;
     padding: 20px;
@@ -161,7 +155,6 @@ input, select {
     display: none;
 }
 
-/* Button Styling */
 button {
     background-color: #4CAF50;
     color: white;
@@ -178,7 +171,6 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Footer Styling */
 footer {
     background: #333;
     color: white;
@@ -187,7 +179,6 @@ footer {
     margin-top: 20px;
 }
 
-/* Responsive Styling */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -225,7 +216,6 @@ footer {
     }
 }
 
-/* Additional Styling */
 .vegetable-item {
     background: white;
     padding: 10px;
@@ -264,7 +254,6 @@ footer {
     background-color: black;
 }
 
-/* Media Queries for Extra Small Devices */
 @media (max-width: 600px) {
     nav {
         flex-direction: column;
