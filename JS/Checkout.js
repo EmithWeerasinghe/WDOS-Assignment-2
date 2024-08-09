@@ -5,14 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     var messageDiv = document.getElementById('message');
     var checkoutForm = document.getElementById('checkout-form');
 
-    // Load the saved cart table from localStorage
     var savedCart = JSON.parse(localStorage.getItem('cart')) || [];
     if (savedCart.length > 0) {
         var cartTableBody = document.querySelector('#cartTable tbody');
         cartTableBody.innerHTML = '';
         var totalPrice = 0;
 
-        // Populate the cart table and calculate the total price
         savedCart.forEach(function(item) {
             var itemTotal = item.price * item.quantity;
             totalPrice += itemTotal;
@@ -25,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
             cartTableBody.appendChild(row);
         });
 
-        // Update the total price
         document.getElementById('totalPrice').textContent = 'Rs. ' + totalPrice + '/-';
     }
 
